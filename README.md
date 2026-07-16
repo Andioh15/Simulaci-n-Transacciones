@@ -1,5 +1,33 @@
 # Simulación de Transacciones - Sistema de Reservas
+# Guía de Ejecución y Demostración
 
+Esta guía detalla los pasos necesarios para configurar el entorno y ejecutar la demostración en vivo del sistema de simulación de transacciones.
+
+## 1. Preparación del Entorno (Antes de la clase)
+
+1. **Base de Datos:**
+   * Asegúrate de que el servicio de PostgreSQL esté en ejecución.
+   * Crea una base de datos llamada `DB` (o el nombre configurado en el script).
+   * Ejecuta el archivo `Transacciones.sql` en tu gestor (pgAdmin, DBeaver o consola) para inicializar el esquema. *Nota: El script de Python también puede recrear estas tablas automáticamente al inicio.*
+
+2. **Entorno Virtual y Dependencias:**
+   * Abre la terminal en la raíz del proyecto.
+   * (Opcional) Activa tu entorno virtual.
+   * Instala la dependencia necesaria para la conexión:
+     ```bash
+     pip install psycopg2-binary
+     ```
+
+3. **Verificación de Credenciales:**
+   * Revisa el archivo `simulacion_transacciones.py` y asegúrate de que el diccionario `DB_CONFIG` tenga tu contraseña correcta de `postgres`.
+
+## 2. Guion para la Demostración en Vivo
+
+Para ejecutar el programa principal, utiliza el comando:
+```bash
+
+python simulacion_transacciones.py
+```
 Este proyecto es una simulación práctica de operaciones transaccionales en bases de datos relacionales utilizando Python (psycopg2) y PostgreSQL.
 
 ## 1. Introducción Teórica
